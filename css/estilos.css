@@ -1,0 +1,169 @@
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    font-family: 'Anton', sans-serif;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fondo{
+    z-index:-1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fondo-color{
+    width: 100%;
+    height: 40%;
+    background-color: blue;
+}
+
+
+.fondo-blanco{
+    
+    width: 100%;
+    height: 60%;
+    background-color: white;
+}
+
+
+.tarjeta{
+    background-color: white;
+    max-width: 90vw; 
+    height: max-content;
+    border: 1px solid black;  
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+   
+}
+
+.nombre-usuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px 0px 20px;
+}
+
+.descripcion > img {
+    margin: 20px 20px 20px 20px ;
+    border-radius: 50%;
+}
+
+.descripcion > p{
+    text-align: center;
+    line-height: 22px;
+    
+}
+
+.botones-sociales{
+    display: flex;
+    flex-direction: column;
+    
+}
+.botones-sociales  i{
+    margin-right: 5px;
+}
+
+.btn-social{
+    
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.firma{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-tiktok{
+    background-color: black;
+}
+
+.btn-youtube{
+    background-color: brown;
+}
+
+.btn-twitter{
+    background-color: rgb(13, 131, 185);
+
+}
+
+.btn-instagram{
+    background-color: goldenrod;
+}
+
+.btn-facebook{
+    background-color: blue;
+}
+
+.btn-github{
+    background-color: blueviolet;
+}
+
+.btn-paypal{
+    background-color: crimson;
+}
+
+@media(min-width:900px){
+    main{
+        min-height: 100vh;
+        justify-content: center;
+    }
+
+    .tarjeta{
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        max-width: 900px;
+    }
+    .descripcion{
+        flex-direction: column-reverse;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .nombre-usuario{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .botones-sociales{
+        grid-column: 2/3;
+        grid-row:1/3;
+    }
+    .firma{
+        grid-column:1/3 ;
+        grid-row: 3/4;
+    }
+}
+
+
+
